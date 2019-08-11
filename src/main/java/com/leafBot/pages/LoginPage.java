@@ -1,7 +1,5 @@
 package com.leafBot.pages;
 
-import org.openqa.selenium.WebElement;
-
 import com.leafBot.testng.api.base.ProjectSpecificMethods;
 
 public class LoginPage extends ProjectSpecificMethods {
@@ -19,8 +17,9 @@ public class LoginPage extends ProjectSpecificMethods {
 		return this;
 	}
 	
-	public void clickLogin() {
+	public HomePage clickLogin() {
 		click(locateElement("class", "decorativeSubmit"));
+		return new HomePage();
 	}
 	
 	/*public LoginPage enterUsername() {
